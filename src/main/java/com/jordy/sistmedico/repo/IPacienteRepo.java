@@ -1,8 +1,7 @@
-package repo;
+package com.jordy.sistmedico.repo;
 
-import model.Paciente;
+import com.jordy.sistmedico.model.Paciente;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 //@Repository
 public interface IPacienteRepo extends JpaRepository<Paciente, Integer> {

@@ -1,4 +1,4 @@
-package model;
+package com.jordy.sistmedico.model;
 
 import javax.persistence.*;
 

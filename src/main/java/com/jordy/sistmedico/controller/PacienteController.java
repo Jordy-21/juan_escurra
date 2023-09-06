@@ -1,8 +1,9 @@
-package controller;
+package com.jordy.sistmedico.controller;
 
-import model.Paciente;
+import com.jordy.sistmedico.model.Paciente;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.IPacienteService;
+import com.jordy.sistmedico.service.IPacienteService;
 
 import java.util.List;
 
@@ -10,7 +11,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/pacientes")
 public class PacienteController {
-    private IPacienteService service;
+    private final  IPacienteService service;
+    public PacienteController(IPacienteService service){
+        this.service=service;
+    }
     @GetMapping
     public List<Paciente> listar() throws Exception{
         return service.listar();
